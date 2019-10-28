@@ -38,39 +38,80 @@ public class HomePageTest extends ScriptBase {
     @Test
     public void verifyhondaOdysseyVSToyotaSienna(){
         homePage=new HomePage(driver);
-        homePage.hondaOdysseyVSToyotaSienna(driver,"popCompareBtn1");
+        homePage.comparison(driver,"popCompareBtn1");
 
     }
 
     @Test
     public void verifyToyotaCamryHybridvsHondaAccordHybrid(){
         homePage=new HomePage(driver);
-        homePage.hondaOdysseyVSToyotaSienna(driver,"popCompareBtn2");
+        homePage.comparison(driver,"popCompareBtn2");
 
     }
     @Test
     public void verifyNissanFrontiervsToyotaTacoma(){
         homePage=new HomePage(driver);
-        homePage.hondaOdysseyVSToyotaSienna(driver,"popCompareBtn3");
+        homePage.comparison(driver,"popCompareBtn3");
 
     }
     @Test
     public void verifySubaruBRZvsToyota86(){
         homePage=new HomePage(driver);
-        homePage.hondaOdysseyVSToyotaSienna(driver,"popCompareBtn4");
+        homePage.comparison(driver,"popCompareBtn4");
 
     }
 
     @Test
     public void verifyGMCSierra1500vsChevroletSilverado1500(){
         homePage=new HomePage(driver);
-        homePage.hondaOdysseyVSToyotaSienna(driver,"popCompareBtn5");
+        homePage.comparison(driver,"popCompareBtn5");
 
     }
     @Test
     public void verifyChevroletCamarovsFordMustang(){
         homePage=new HomePage(driver);
-        homePage.hondaOdysseyVSToyotaSienna(driver,"popCompareBtn6");
+        homePage.comparison(driver,"popCompareBtn6");
+
+    }
+
+
+    @Test
+    public void verifyCalculateCarPayments()throws InterruptedException{
+        homePage=new HomePage(driver);
+        homePage.calcuations(driver,"Calculate Car Payments");
+
+    }
+
+    @Test
+    public void verifyShouldIleaseorpurchase()throws InterruptedException{
+        homePage=new HomePage(driver);
+        homePage.calcuations(driver,"Should I lease or purchase?");
+
+    }
+    @Test
+    public void verifyRebatevsFinancingCalculator()throws InterruptedException{
+        homePage=new HomePage(driver);
+        homePage.calcuations(driver,"Rebate vs. 0% Financing");
+
+    }
+
+    @Test
+    public void verifyAffordabilityCalculator()throws InterruptedException{
+        homePage=new HomePage(driver);
+        homePage.calcuations(driver,"How much car can I afford?");
+
+    }
+
+    @Test
+    public void verifyCarAcceleratedPayoff()throws InterruptedException{
+        homePage=new HomePage(driver);
+        homePage.calcuations(driver,"Car Accelerated Payoff");
+
+    }
+    @Test
+    public void verifyFuelSavingsCalculator()throws InterruptedException{
+        homePage=new HomePage(driver);
+        homePage.calcuations(driver,"Fuel Savings Calculator");
 
     }
     @AfterTest

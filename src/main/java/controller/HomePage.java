@@ -21,6 +21,8 @@ public class HomePage extends ScriptBase {
     WebElement tools;
     @FindBy(xpath = "//a[@title='Car Comparison']")
     WebElement carComparison;
+    @FindBy(css ="body > div.wrapper > div.tools-bg.bleed > div.section-wrap > div > section.col2 > div > h2 > a")
+    WebElement calculations;
 
     public HomePage(WebDriver driver) {
 
@@ -50,8 +52,17 @@ public class HomePage extends ScriptBase {
         home.click();
 
     }
-    public void hondaOdysseyVSToyotaSienna(WebDriver driver, String popCompare){
+    public void comparison(WebDriver driver, String popCompare){
         mouseOver(driver.findElement(By.xpath("//*//a[@id='" + popCompare + "']")),driver);
+
+
+    }
+
+    public void calcuations(WebDriver driver,String calculation)throws InterruptedException{
+        calculations.click();
+        home.click();
+        Thread.sleep(5000);
+        mouseOver(driver.findElement(By.xpath("//section[2]//ul//a[contains(text(),'"+calculation+"')]")),driver);
 
 
     }
