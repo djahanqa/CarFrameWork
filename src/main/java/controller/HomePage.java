@@ -23,6 +23,20 @@ public class HomePage extends ScriptBase {
     WebElement carComparison;
     @FindBy(css ="body > div.wrapper > div.tools-bg.bleed > div.section-wrap > div > section.col2 > div > h2 > a")
     WebElement calculations;
+    @FindBy(xpath = "//h1/a[@title='Car Buying Guides']")
+    WebElement carBuyingGuides;
+    @FindBy(css = "#articles_wrapper_st > li:nth-child(1) > article > a > div.img-container > img")
+    WebElement fastestCar;
+    @FindBy (css = "#articles_wrapper_st > li:nth-child(2) > article > a > div.img-container > img")
+    WebElement luxuryCar;
+    @FindBy(css = "#articles_wrapper_st > li:nth-child(4) > article > a > div.img-container > img")
+    WebElement sportsCar;
+    @FindBy(css = "#articles_wrapper_st > li:nth-child(5) > article > a > div.img-container > img")
+    WebElement bigSedans;
+//    @FindBy(css = "#aw0 > amp-img > img")
+//    WebElement buyingGuides;
+//    @FindBy(xpath = "//div[2]//div/ul/li[1]/a[@class='block']")
+//    WebElement contact;
 
     public HomePage(WebDriver driver) {
 
@@ -63,13 +77,39 @@ public class HomePage extends ScriptBase {
         home.click();
         Thread.sleep(5000);
         mouseOver(driver.findElement(By.xpath("//section[2]//ul//a[contains(text(),'"+calculation+"')]")),driver);
+    }
+
+    public void carBuyingGuide(WebDriver driver) throws InterruptedException {
+        carBuyingGuides.click();
+        home.click();
+        fastestCar.isDisplayed();
+        luxuryCar.isDisplayed();
+        sportsCar.isDisplayed();
+        bigSedans.isDisplayed();
+      //  Thread.sleep(500);
+//        driver.findElement(By.cssSelector("#aw0 > amp-img > img")).isDisplayed();
+//        Thread.sleep(500);
+
+       // buyingGuides.click();
+      //  home.click();
+//        driver.switchTo().frame("https://tpc.googlesyndication.com/simgad/4091936537381294642");
+//        Thread.sleep(500);
+//        home.click();
+//        driver.switchTo().frame("https://tpc.googlesyndication.com/simgad/10921202043608668027");
+//        Thread.sleep(500);
+//        home.click();
+//        driver.switchTo().frame("https://tpc.googlesyndication.com/simgad/10921202043608668027");
+
 
 
     }
+
     public void mouseOver(WebElement element, WebDriver driver) {
         Actions action = new Actions(driver);
         element = element;
         action.moveToElement(element).perform();
 
+
+        }
+
     }
-}

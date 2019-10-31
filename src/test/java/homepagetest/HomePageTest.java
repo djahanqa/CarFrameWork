@@ -114,6 +114,14 @@ public class HomePageTest extends ScriptBase {
         homePage.calcuations(driver,"Fuel Savings Calculator");
 
     }
+
+    @Test
+    public void verifycarbuyingGuides() throws InterruptedException {
+        homePage = new HomePage(driver);
+        homePage.carBuyingGuide(driver);
+    }
+
+
     @AfterTest
     public void closebrowser() {
         driver.close();
