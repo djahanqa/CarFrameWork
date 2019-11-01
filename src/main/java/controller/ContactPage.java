@@ -18,32 +18,20 @@ public class ContactPage extends ScriptBase {
     @FindBy(css = "#js-promo-popup > div > div.temp2-col-main.company > div.col-pad")
     WebElement contact;
 
-    @FindBy(css = "#top")
-    WebElement privacyPolicies;
 
     public ContactPage(WebDriver driver) {
 
         PageFactory.initElements(driver, this);
-
     }
 
     public void contactInfo(WebDriver driver) {
-
 
         driver.findElement(By.xpath("//footer//li[1]/a[@class='block']")).click();
 
         windowhandle(driver);
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
     }
 
-
-    public void privacyPolicy(WebDriver driver){
-
-        driver.findElement(By.xpath("//div/footer//li[4]/a[@class='block']")).click();
-        windowhandle(driver);
-        driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
-    }
 
  public void windowhandle (WebDriver driver) {
 
@@ -55,7 +43,6 @@ public class ContactPage extends ScriptBase {
 
         Assert.assertEquals(contact,contact);
 
-        Assert.assertEquals(privacyPolicies,privacyPolicies);
         driver.close();
         driver.switchTo().window(windowHandleBefore);
 

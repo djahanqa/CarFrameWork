@@ -100,8 +100,6 @@ public class HomePage extends ScriptBase {
 //        home.click();
 //        driver.switchTo().frame("https://tpc.googlesyndication.com/simgad/10921202043608668027");
 
-
-
     }
 
     public void mouseOver(WebElement element, WebDriver driver) {

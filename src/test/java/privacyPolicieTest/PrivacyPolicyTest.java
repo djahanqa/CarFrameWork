@@ -1,15 +1,15 @@
-package cotactTest;
+package privacyPolicieTest;
 
 import base.ScriptBase;
 import controller.ContactPage;
-
+import controller.PrivacyPolicyPage;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class ContactTest extends ScriptBase {
+public class PrivacyPolicyTest extends ScriptBase {
 
-    ContactPage contactPage;
+    PrivacyPolicyPage privacyPolicyPage;
 
     @BeforeTest
     public void beforetest() {
@@ -17,9 +17,9 @@ public class ContactTest extends ScriptBase {
     }
 
     @Test
-    public void verifyContactInfo() {
-        contactPage = new ContactPage(driver);
-        contactPage.contactInfo(driver);
+    public void verifyprivacyPolicy() {
+        privacyPolicyPage = new PrivacyPolicyPage(driver);
+        privacyPolicyPage.privacyPolicy(driver);
     }
 
 
@@ -28,6 +28,6 @@ public class ContactTest extends ScriptBase {
         driver.close();
         driver.quit();
 
-    }
+}
 
 }

@@ -10,23 +10,24 @@ import org.testng.Assert;
 
 import java.util.concurrent.TimeUnit;
 
-public class TermsOfUse extends ScriptBase {
+public class PrivacyPolicyPage extends ScriptBase {
     @FindBy(css = "#top")
-    WebElement termsOfUse;
+    WebElement privacyPolicies;
 
-    public TermsOfUse(WebDriver driver) {
+
+
+    public PrivacyPolicyPage(WebDriver driver) {
 
         PageFactory.initElements(driver, this);
+
+
     }
+    public void privacyPolicy(WebDriver driver){
 
-    public void termsOfUse(WebDriver driver){
-
-        driver.findElement(By.xpath("//div/footer//li[3]/a[@class='block']")).click();
+        driver.findElement(By.xpath("//div/footer//li[4]/a[@class='block']")).click();
         windowhandle(driver);
-        driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     }
-
-
     public void windowhandle (WebDriver driver) {
 
         String windowHandleBefore = driver.getWindowHandle();
@@ -36,10 +37,12 @@ public class TermsOfUse extends ScriptBase {
         }
 
 
-        Assert.assertEquals(termsOfUse,termsOfUse);
+        Assert.assertEquals(privacyPolicies, privacyPolicies);
         driver.close();
         driver.switchTo().window(windowHandleBefore);
 
     }
 
-}
+    }
+
+
