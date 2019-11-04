@@ -1,14 +1,13 @@
 package termsOfUseTest;
 
 import base.ScriptBase;
-import controller.ContactPage;
-import controller.TermsOfUse;
+import controller.TermsOfUsePage;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class TermsOfUseTest extends ScriptBase {
-    TermsOfUse termsOfUse;
+    TermsOfUsePage termsOfUse;
 
     @BeforeTest
     public void beforetest() {
@@ -18,7 +17,7 @@ public class TermsOfUseTest extends ScriptBase {
 
     @Test
     public void verifytermsOfUse() {
-        termsOfUse = new TermsOfUse(driver);
+        termsOfUse = new TermsOfUsePage(driver);
         termsOfUse.termsOfUse(driver);
     }
 

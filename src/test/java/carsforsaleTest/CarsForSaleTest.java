@@ -1,0 +1,39 @@
+package carsforsaleTest;
+
+import base.ScriptBase;
+import controller.CarsForSalePage;
+import controller.TermsOfUsePage;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+public class CarsForSaleTest extends ScriptBase {
+
+   CarsForSalePage carsForSalePage;
+
+    @BeforeTest
+    public void beforetest() {
+        init();
+
+    }
+
+    @Test
+    public void verifycarsale() throws InterruptedException {
+        carsForSalePage = new CarsForSalePage(driver);
+        carsForSalePage.carsale(driver);
+    }
+
+    @Test
+    public void verifyiframe() throws InterruptedException {
+        carsForSalePage = new CarsForSalePage(driver);
+        carsForSalePage.iframe(driver);
+    }
+//    @AfterTest
+//    public void closebrowser() {
+//        driver.close();
+//        driver.quit();
+
+    }
+
+//}
+

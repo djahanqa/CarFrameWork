@@ -67,7 +67,7 @@ public class HomePage extends ScriptBase {
 
     }
     public void comparison(WebDriver driver, String popCompare){
-        mouseOver(driver.findElement(By.xpath("//*//a[@id='" + popCompare + "']")),driver);
+        mouseOver(driver.findElement(By.xpath("//*//a[@id='"+popCompare+"']")),driver);
 
 
     }

@@ -10,11 +10,11 @@ import org.testng.Assert;
 
 import java.util.concurrent.TimeUnit;
 
-public class TermsOfUse extends ScriptBase {
+public class TermsOfUsePage extends ScriptBase {
     @FindBy(css = "#top")
     WebElement termsOfUse;
 
-    public TermsOfUse(WebDriver driver) {
+    public TermsOfUsePage(WebDriver driver) {
 
         PageFactory.initElements(driver, this);
     }

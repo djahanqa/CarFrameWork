@@ -2,7 +2,6 @@ package researchPageTest;
 
 import base.ScriptBase;
 import controller.ResearchPage;
-import controller.TermsOfUse;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
