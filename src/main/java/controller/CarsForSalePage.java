@@ -53,10 +53,7 @@ public class CarsForSalePage extends ScriptBase {
 
     public void iframe(WebDriver driver) {
 
-        carsForSale.click();
-        allMakers.click();
-        Assert.assertEquals(showResult, showResult);
-        continueBotton.click();
+
         driver.findElement(By.tagName("iframe"));
        driver.switchTo().frame(0);
        driver.switchTo().defaultContent();
