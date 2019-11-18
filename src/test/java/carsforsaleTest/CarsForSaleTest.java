@@ -28,6 +28,18 @@ public class CarsForSaleTest extends ScriptBase {
         carsForSalePage = new CarsForSalePage(driver);
         carsForSalePage.iframe(driver);
     }
+
+    @Test
+    public void verifyselectMakeFromList() throws InterruptedException {
+        carsForSalePage = new CarsForSalePage(driver);
+        carsForSalePage.selectMakeFromList(driver,"Select Makes From List Below");
+    }
+    @Test
+    public void verifyselectCatagory() throws InterruptedException {
+        carsForSalePage = new CarsForSalePage(driver);
+        carsForSalePage.selectMakeFromList(driver,"Or, Select a Category");
+    }
+
 //    @AfterTest
 //    public void closebrowser() {
 //        driver.close();

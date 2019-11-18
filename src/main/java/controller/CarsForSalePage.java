@@ -1,6 +1,7 @@
 package controller;
 
 import base.ScriptBase;
+import com.sun.tools.javac.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -10,7 +11,10 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
+import java.awt.*;
 import java.util.concurrent.TimeUnit;
+
+import static org.openqa.selenium.By.xpath;
 
 public class CarsForSalePage extends ScriptBase {
 
@@ -30,6 +34,8 @@ public class CarsForSalePage extends ScriptBase {
     WebElement max;
     @FindBy(id = "button_prices_apply_js")
     WebElement apply;
+    @FindBy(id="by_make_st")
+    WebElement byMakers;
 
     public CarsForSalePage(WebDriver driver) {
 
@@ -45,20 +51,31 @@ public class CarsForSalePage extends ScriptBase {
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         price.isSelected();
         Thread.sleep(5000);
+
+
+
+
         driver.findElement(By.xpath("//*[@id='prices_min_textbox_js'][@type='text']")).isSelected();
-        driver.findElement(By.xpath("//*[@id='prices_max_textbox_js'][@type='text']")).isSelected();
+        //driver.findElement(Bxpath("//*[@id='prices_min_textbox_js'][@type='text']")).isSelected();
+        driver.findElement(xpath("//*[@id='prices_max_textbox_js'][@type='text']")).isSelected();
         apply.isSelected();
 
     }
 
     public void iframe(WebDriver driver) {
-
-
         driver.findElement(By.tagName("iframe"));
-       driver.switchTo().frame(0);
-       driver.switchTo().defaultContent();
+        driver.switchTo().frame(0);
+        driver.switchTo().defaultContent();
         driver.quit();
+
+
     }
+    public void selectMakeFromList(WebDriver driver,String list) throws InterruptedException{
+        carsForSale.click();
+        driver.findElement(By.xpath("//*[@id='by_make_js']//section/h1[contains(text(),'" + list + "')]")).isDisplayed();
+
+
+        }
 
 }
 
