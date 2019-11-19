@@ -22,20 +22,6 @@ public class AboutPage extends ScriptBase {
     public void aboutInfo(WebDriver driver){
 
         driver.findElement(By.xpath("//div/footer//li[2]/a[@class='block']")).click();
-        windowhandle(driver);
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-}
-    public void windowhandle (WebDriver driver) {
-
-        String windowHandleBefore = driver.getWindowHandle();
-
-        for (String windHandle : driver.getWindowHandles()) {
-            driver.switchTo().window(windHandle);
-        }
-
-        Assert.assertEquals(about, about);
-        driver.close();
-        driver.switchTo().window(windowHandleBefore);
 
     }
 }

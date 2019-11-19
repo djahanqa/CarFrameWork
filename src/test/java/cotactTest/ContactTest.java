@@ -17,17 +17,17 @@ public class ContactTest extends ScriptBase {
     }
 
     @Test
-    public void verifyContactInfo() {
+    public void verifyContactInfo() throws InterruptedException {
         contactPage = new ContactPage(driver);
-        contactPage.contactInfo(driver);
+        contactPage.contactInfo(driver,"Facebook Logo");
     }
 
 
-    @AfterTest
-    public void closebrowser() {
-        driver.close();
-        driver.quit();
-
-    }
+//    @AfterTest
+//    public void closebrowser() {
+//        driver.close();
+//        driver.quit();
+//
+//    }
 
 }
