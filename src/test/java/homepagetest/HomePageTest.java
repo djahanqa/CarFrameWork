@@ -3,6 +3,7 @@ package homepagetest;
 import base.ScriptBase;
 import controller.HomePage;
 import org.openqa.selenium.WebDriver;
+import org.testng.ITestContext;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -127,6 +128,10 @@ public class HomePageTest extends ScriptBase {
         driver.close();
         driver.quit();
 
+
+    }
+
+    public void onTestStart(ITestContext result) {
 
     }
 }

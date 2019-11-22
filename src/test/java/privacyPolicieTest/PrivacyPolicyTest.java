@@ -3,6 +3,7 @@ package privacyPolicieTest;
 import base.ScriptBase;
 import controller.ContactPage;
 import controller.PrivacyPolicyPage;
+import org.testng.ITestContext;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -30,4 +31,7 @@ public class PrivacyPolicyTest extends ScriptBase {
 
 }
 
+    public void onTestStart(ITestContext result) {
+
+    }
 }

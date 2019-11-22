@@ -10,6 +10,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
+import org.testng.ITestContext;
 
 import java.awt.*;
 import java.util.concurrent.TimeUnit;
@@ -52,12 +53,10 @@ public class CarsForSalePage extends ScriptBase {
         price.isSelected();
         Thread.sleep(5000);
 
-
-
-
         driver.findElement(By.xpath("//*[@id='prices_min_textbox_js'][@type='text']")).isSelected();
         //driver.findElement(Bxpath("//*[@id='prices_min_textbox_js'][@type='text']")).isSelected();
         driver.findElement(xpath("//*[@id='prices_max_textbox_js'][@type='text']")).isSelected();
+
         apply.isSelected();
 
     }
@@ -77,18 +76,11 @@ public class CarsForSalePage extends ScriptBase {
 
         }
 
+    public void onTestStart(ITestContext result) {
+
+    }
 }
-
-
-
-
-
-
-
-
-
-
-    //    private void dropdown(WebElement element, WebDriver driver) {
+//    private void dropdown(WebElement element, WebDriver driver) {
 //        Select select = new Select(element);
 //
 //private void cow(WebElement element, WebDriver driver) {

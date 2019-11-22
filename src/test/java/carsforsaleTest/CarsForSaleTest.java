@@ -3,6 +3,7 @@ package carsforsaleTest;
 import base.ScriptBase;
 import controller.CarsForSalePage;
 import controller.TermsOfUsePage;
+import org.testng.ITestContext;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -38,6 +39,10 @@ public class CarsForSaleTest extends ScriptBase {
     public void verifyselectCatagory() throws InterruptedException {
         carsForSalePage = new CarsForSalePage(driver);
         carsForSalePage.selectMakeFromList(driver,"Or, Select a Category");
+    }
+
+    public void onTestStart(ITestContext result) {
+
     }
 
 //    @AfterTest

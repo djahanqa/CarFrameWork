@@ -9,9 +9,8 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
+import org.testng.ITestContext;
 
-
-import java.util.concurrent.TimeUnit;
 
 public class modelPage extends ScriptBase {
     @FindBy(xpath = "//*[@id='c4s_st'][@title='Cars for Sale']")
@@ -42,5 +41,9 @@ public class modelPage extends ScriptBase {
         nextModel.click();
         Assert.assertEquals(selectedCar,selectedCar);
         home.click();
+    }
+
+    public void onTestStart(ITestContext result) {
+
     }
 }

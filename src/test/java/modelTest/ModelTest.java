@@ -2,6 +2,7 @@ package modelTest;
 
 import base.ScriptBase;
 import controller.modelPage;
+import org.testng.ITestContext;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -393,7 +394,9 @@ public class ModelTest extends ScriptBase {
     }
 
 
+    public void onTestStart(ITestContext result) {
 
+    }
 }
 //    @AfterTest
 //    public void closebrowser() {

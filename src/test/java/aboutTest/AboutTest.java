@@ -2,7 +2,7 @@ package aboutTest;
 
 import base.ScriptBase;
 import controller.AboutPage;
-import controller.ContactPage;
+import org.testng.ITestContext;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -16,9 +16,9 @@ public class AboutTest extends ScriptBase {
     }
 
     @Test
-    public void verifyAboutInfo() {
+    public void verifyAboutInfo() throws InterruptedException {
         aboutPage = new AboutPage(driver);
-        aboutPage.aboutInfo(driver);
+        aboutPage.aboutInfo(driver,"About");
     }
 
     @AfterTest
@@ -29,4 +29,7 @@ public class AboutTest extends ScriptBase {
 
     }
 
+    public void onTestStart(ITestContext result) {
+
+    }
 }

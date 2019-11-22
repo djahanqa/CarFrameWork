@@ -2,6 +2,7 @@ package researchPageTest;
 
 import base.ScriptBase;
 import controller.ResearchPage;
+import org.testng.ITestContext;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -27,6 +28,9 @@ public class ResearchPageTest extends ScriptBase {
 
         }
 
+    public void onTestStart(ITestContext result) {
+
     }
+}
 
 

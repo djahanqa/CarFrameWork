@@ -2,8 +2,9 @@ package base;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.ITestContext;
 
-public class ScriptBase {
+public abstract class ScriptBase {
     public WebDriver driver;
     public void init(){
         System.setProperty("webdriver.chrome.driver","./drivers/chromedriver");
@@ -11,6 +12,8 @@ public class ScriptBase {
        this.driver.get("https://www.car.com/");
 
     }
+
+    public abstract void onTestStart(ITestContext result);
 }
 
 

@@ -2,6 +2,7 @@ package termsOfUseTest;
 
 import base.ScriptBase;
 import controller.TermsOfUsePage;
+import org.testng.ITestContext;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -28,4 +29,7 @@ public void closebrowser() {
 
         }
 
-        }
+    public void onTestStart(ITestContext result) {
+
+    }
+}

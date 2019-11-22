@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.ITestContext;
 
 public class CarPage extends ScriptBase {
     @FindBy(xpath = "//*[@id='c4s_st'][@title='Cars for Sale']")
@@ -40,6 +41,10 @@ public class CarPage extends ScriptBase {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView(true);", element);
         element.getText();
+
+    }
+
+    public void onTestStart(ITestContext result) {
 
     }
 }
